@@ -1,0 +1,3 @@
+In this approach we use category has sub cateogry
+a category can have ONE page
+one page can have many divs

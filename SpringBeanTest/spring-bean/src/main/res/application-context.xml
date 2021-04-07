@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean1" class="examples.spring_bean.Hello">
+		<property name="words" ref="curseWordCreator" />
+	</bean>
+	<bean id="curseWordCreator" factory-method="wordCreator"
+		class="examples.spring_bean.CurseWordsCreator" >
+		<constructor-arg value="yohhooo "/>
+	</bean>
+	<bean id="helloBean2" class="examples.spring_bean.Hello">
+		<property name="words" ref="curseWordCreator" />
+	</bean>
+</beans>
